@@ -4,7 +4,7 @@ export class LoginPage{
     passwordInput  = '#input-password'
     loginButton ='form > .btn'
     myAccount ='#content > :nth-child(1)'
-    errorMessage = ' Warning: No match for E-Mail Address and/or Password.'
+    errorMessage = '.alert'
 
     getEmailSelector() {
         return cy.get(this.emialInput);
@@ -19,7 +19,7 @@ export class LoginPage{
         return cy.get(this.myAccount);
     }
     getErrorMessageSelector() {
-        return cy.contains(this.errorMessage);
+        return cy.get (this.errorMessage);
     }
 
 };

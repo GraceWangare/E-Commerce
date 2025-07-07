@@ -13,27 +13,27 @@ describe('Login', () => {
     })  
   
   it('Login with valid credentials', () => {
-    cy.fixture('loginDetails').then((loginDetails) => {
-        loginDetails.getEmailSelector().type(loginDetails.valid);
-        loginDetails.getPasswordSelector().type(loginDetails.validPassword);
+    cy.fixture('login').then((loginData) => {
+        loginDetails.getEmailSelector().type(loginData.valid);
+        loginDetails.getPasswordSelector().type(loginData.validPassword);
         loginDetails.getLoginButtonSelector().click();
         loginDetails.getLoginAssertion().should('be.visible');
     })
   })  
 
   it('Login with invalid password', () => {
-    cy.fixture('loginDetails').then((loginDetails) => {
-        loginDetails.getEmailSelector().type(loginDetails.valid);
-        loginDetails.getPasswordSelector().type(loginDetails.invalidPassword);
+    cy.fixture('login').then((loginData) => {
+        loginDetails.getEmailSelector().type(loginData.valid);
+        loginDetails.getPasswordSelector().type(loginData.invalidPassword);
         loginDetails.getLoginButtonSelector().click();
         loginDetails.getErrorMessageSelector().should('be.visible');
     })
   })  
 
    it('Login with invalid  username', () => {
-    cy.fixture('loginDetails').then((loginDetails) => {
-        loginDetails.getEmailSelector().type(loginDetails.invalidUsername);
-        loginDetails.getPasswordSelector().type(loginDetails.validPassword);
+    cy.fixture('login').then((loginData) => {
+        loginDetails.getEmailSelector().type(loginData.invalidUsername);
+        loginDetails.getPasswordSelector().type(loginData.validPassword);
         loginDetails.getLoginButtonSelector().click();
         loginDetails.getErrorMessageSelector().should('be.visible');
     })

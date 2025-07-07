@@ -38,7 +38,7 @@ describe('Login', () => {
         loginDetails.getErrorMessageSelector().should('be.visible');
     })
   }) 
-  it.only('Login with empty passsword and empty email', () => {
+  it('Login with empty passsword and empty email', () => {
     cy.fixture('login').then((loginData) => {
         loginDetails.getEmailSelector().type(' ');
         loginDetails.getPasswordSelector().type(' ');

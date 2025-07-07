@@ -2,8 +2,8 @@
   
   "validUsername" : "karey@gmail.com",
   "validPassword": "7890",
-    "invalidUsername" : "baduser@mail",
-    "invalidPassword": "6789h"
+  "invalidUsername" : "baduser@mail",
+  "invalidPassword": "6789h"
 }
 
 

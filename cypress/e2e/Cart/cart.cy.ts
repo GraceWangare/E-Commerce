@@ -1,10 +1,12 @@
 describe('Cart',()=>{
+
+    const email = Cypress.env('login_email')
+    const password = Cypress.env('login_password')
     beforeEach(() => {
 
         cy.clearCookies();
         cy.clearLocalStorage();
-        cy.login(Cypress.env('LOGIN_EMAIL'),
-                 Cypress.env('LOGIN_PASSWORD'))
+       
         cy.visit('https://naveenautomationlabs.com/opencart/index.php?route=account/account')  
     })
 

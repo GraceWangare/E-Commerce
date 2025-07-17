@@ -1,8 +1,9 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  
   e2e: {
-    baseUrl: "https://naveenautomationlabs.com/opencart/index.php?route=account/login",
+    baseUrl: "https://naveenautomationlabs.com/opencart/index.php?route=account/loginnp",
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     video: false,
     
@@ -10,6 +11,7 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+  
 
   watchForFileChanges: false,
   defaultCommandTimeout: 10000,
@@ -20,4 +22,6 @@ export default defineConfig({
     runMode: 2,
     openMode: 0,
   },
+
+  projectId: "7h8ib8"
 });

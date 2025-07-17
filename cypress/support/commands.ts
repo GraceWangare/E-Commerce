@@ -35,7 +35,7 @@ const password = Cypress.env('validPassword')
 
 Cypress.Commands.add('login', (email, password) => {
   cy.session(`${email}-${password}`, () => {
-    cy.visit('/')
+    cy.visit('https://naveenautomationlabs.com/opencart/index.php?route=account/login')
     // cy.get('.oxd-input.oxd-input--active').type('Admin')
     loginPage.getEmailSelector().type(email)
    loginPage.getPasswordSelector().type(password)

@@ -20,7 +20,9 @@ export class LoginPage{
     }
     getErrorMessageSelector() {
         return cy.get (this.errorMessage);
+    
     }
+
 
 };
   

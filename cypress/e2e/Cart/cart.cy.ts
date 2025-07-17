@@ -3,8 +3,8 @@ describe('Cart',()=>{
 
         cy.clearCookies();
         cy.clearLocalStorage();
-        cy.login(Cypress.env('validUsername'),
-                 Cypress.env('validPassword'))
+        cy.login(Cypress.env('LOGIN_EMAIL'),
+                 Cypress.env('LOGIN_PASSWORD'))
         cy.visit('https://naveenautomationlabs.com/opencart/index.php?route=account/account')  
     })
 

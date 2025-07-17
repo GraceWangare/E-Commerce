@@ -4,9 +4,9 @@ const loginDetails=new LoginPage();
 
 
 describe('Login', () => {
-
-  const email=Cypress.env('validUsername') ;
-  const password=Cypress.env("validPassword") ;
+const email = Cypress.env('LOGIN_EMAIL')
+const password = Cypress.env('LOGIN_PASSWORD')
+ 
  
 
   beforeEach(() => {

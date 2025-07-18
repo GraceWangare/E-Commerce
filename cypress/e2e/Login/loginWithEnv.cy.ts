@@ -5,7 +5,8 @@ const loginDetails=new LoginPage();
 
 describe('Login', () => {
 const email = Cypress.env('LOGIN_EMAIL')
-const password = Cypress.env('lLOGIN_PASSWORD')
+
+const password = Cypress.env('LOGIN_PASSWORD')
  
  
 

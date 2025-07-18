@@ -30,7 +30,8 @@ import cypress = require("cypress")
 import { LoginPage } from "../../POM/loginPage" 
 
 const loginPage = new LoginPage()
-
+const email = Cypress.env('login_email')
+const password = Cypress.env('login_password')
 
 Cypress.Commands.add('login', (email, password) => {
   cy.session(`${email}-${password}`, () => {

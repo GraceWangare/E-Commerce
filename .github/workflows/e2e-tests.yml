@@ -20,10 +20,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
-          CYPRESS_LOGIN_EMAIL:  ${{ secrets.LOGIN_EMAIL }}
-          CYPRESS_LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+          CYPRESS_LOGIN_EMAIL:  ${{ secrets.CYPRESS_LOGIN_EMAIL }}
+          CYPRESS_LOGIN_PASSWORD: ${{ secrets.CYPRESS_LOGIN_PASSWORD }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          CYPRESS_BASE_URL: ${{ secrets.BASE_URL }}
+          CYPRESS_BASE_URL: ${{ secrets.CYPRESS_BASE_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #takes care of npm install an caching 
         with:

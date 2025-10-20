@@ -2,16 +2,17 @@ import { LoginPage } from "../../../POM/loginPage"
 
 const loginDetails=new LoginPage();
 
-
 describe('Login', () => {
-const email = Cypress.env('login_email');
+
+ const email = Cypress.env('login_email');
 const password = Cypress.env('login_password');
- 
+const baseUrl = Cypress.env('base_url');
+
  
 
   beforeEach(() => {
-    cy.visit('https://naveenautomationlabs.com/opencart/index.php?route=account/login')
-    
+    cy.visit(baseUrl);
+   
     
   })  
   

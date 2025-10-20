@@ -3,7 +3,7 @@ import { defineConfig } from "cypress";
 export default defineConfig({
   
   e2e: {
-    baseUrl: "https://naveenautomationlabs.com/opencart/index.php?route=account/loginnp",
+    baseUrl: "https://naveenautomationlabs.com/opencart",
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     video: false,
     
